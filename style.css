@@ -49,17 +49,42 @@ h1 {
 }
 
 .content {
-    width: 90vw;
     height: 80vh;
     margin: 3vh;
     margin-top: 2vh;
-    background-color: var(--primary);
     align-items: center;
     justify-content: center;
     display: flex;
 }
 
+#map-content {
+    flex-direction: column;
+    align-items: stretch;
+}
+
 .map-img {
-    max-height: 80vh;
+    max-height: 70vh;
     max-width: 90vw;
 }
+
+.meal-container {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    justify-content: space-evenly;
+}
+
+.meal{
+    border: none;
+    background-color: rgb(202, 202, 202);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 2vh;
+    flex: 1;
+    cursor: pointer;
+}
+
+.active {
+    background-color: white;
+}
+
