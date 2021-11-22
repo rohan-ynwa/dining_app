@@ -82,9 +82,9 @@ h1 {
     padding: 2vh;
     flex: 1;
     cursor: pointer;
+    border-right: 0.01rem solid var(--accent-alt);
 }
 
 .active {
-    background-color: white;
+    background-color: var(--primary);
 }
-

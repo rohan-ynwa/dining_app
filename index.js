@@ -1,20 +1,9 @@
-// const buttons = document.querySelectorAll(".menu");
+// //to select menu (lunch, dinner etc.)
+const buttons = document.querySelectorAll(".meal");
 
-// document.querySelector(".menu").addEventListener('click',()=>{
-//   active();
-// })
-
-// active = () => {
-//   var current = "";
-//   sections.forEach((section) => {
-//     const sectionTop = section.offsetTop; 
-//     if ((-(document.querySelector("section").getBoundingClientRect().top)) >= (sectionTop - 400)) {
-//       current = section.getAttribute("id"); }
-//     });
-//   nav.forEach(i => {
-//     i.classList.remove("active");
-//     if (i.classList.contains(current)) {
-//       i.classList.add("active");
-//     }
-//   });
-// };
+document.querySelectorAll('.meal').forEach(function(e) {
+    e.addEventListener('click', function() {
+        buttons.forEach(i => {i.classList.remove("active")})
+        this.classList.add("active");
+    })
+  });
