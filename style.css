@@ -224,6 +224,7 @@ h3 {
 .ing-container {
     height: 40vh;
     margin-top: 5vh;
+    overflow: scroll;
 }
 
 li{
