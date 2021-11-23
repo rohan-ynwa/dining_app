@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Matherium</title>
+    <title>Dining Hall App</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/index.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
@@ -13,7 +14,7 @@
     <div class="container">
         <section id="map">
             <div class="heading">
-                <h1>UMass Dining Hall App</h1>
+                <h1>UMass Worcester Dining Hall App</h1>
             </div>
             <div class="content" id="map-content">
                 <div class="meal-container"> 
@@ -23,16 +24,124 @@
                     <button class="meal" id="Dinner">Dinner</button>
                     <button class="meal" id="Late Night">Late Night</button>
                 </div>
-                <img class="map-img" src="woo-floor-placeholder.jpeg">
+                <img class="map-img" src="Bakery.jpg">
                 <!-- <object data="algerie.svg" type="image/svg+xml"></object> -->
             </div>
         </section>
         <section id="menu">
             <div class="heading">
                 <!-- This should be generated -->
-                <h1>Menu at x</h1>
+                <h1>Menu at Bakery</h1>
             </div>
-            <div class="content">
+            <div class="content" id="menu-content">
+                <form class = "filter-form"> 
+                    <div class="filter-container">
+                        <h2>Filter by Diet:</h2>
+                        <div class = "checkbox-container">
+                            <div class = "option">
+                                <h3>Vegetarian</h3>
+                                <input type="checkbox" name="diet" class = "filter" value="1">
+                            </div>
+                            <div class = "option">
+                                <h3>Halal</h3>
+                                <input type="checkbox" name="diet" class = "filter" value="1">
+                            </div>
+                            <div class = "option">
+                                <h3>Antibiotic Free</h3>
+                                <input type="checkbox" name="diet" class = "filter" value="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-container">
+                        <h2>Filter by Allergen:</h2>
+                        <div class = "checkbox-container">
+                            <div class = "option">
+                                <h3>Milk</h3>
+                                <input type="checkbox" name="diet" class = "filter" value="1">
+                            </div>
+                            <div class = "option">
+                                <h3>Gluten</h3>
+                                <input type="checkbox" name="diet" class = "filter" value="1">
+                            </div>
+                            <div class = "option">
+                                <h3>Soy</h3>
+                                <input type="checkbox" name="diet" class = "filter" value="1">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" id="submit-button" value="Filter" class="filter-button">	
+                </form>
+                <div class="table"> 
+                    <div id="selection">
+                        <div class="item">
+                            Buttermilk Pancakes
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-o"></span>
+                                <span class="fa fa-star-o"></span>
+                            </div>
+                        </div>
+                        <div class="item item-active">
+                            Hot Oatmeal
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-o"></span>
+                            </div>
+                        </div>
+                        <!-- <div class="item">
+                            Omelet 
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-o"></span>
+                                <span class="fa fa-star-o"></span>
+                            </div>
+                        </div> -->
+                        <div class="item">
+                            Mini Cheese Danish
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-o"></span>
+                                <span class="fa fa-star-o"></span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            Chinese Twist Cruller
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-o"></span>
+                                <span class="fa fa-star-o"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="info">
+                        <div class="ing-header">
+                            Mini Cheese Danish
+                        </div>
+                        <h2 style="color: black; font-size: large;">Ingredients:</h2>
+                        <div class="ing-container">
+                            <li>Sugar</li><li>Eggs</li><li>Modified Corn Starch</li><li> Juice Concentrate</li><li> Enriched Unbleached Flour</li>
+                        </div>
+                        <div>
+                            <p>your rating:</p>
+                            <span class="fa fa-star select"></span>
+                            <span class="fa fa-star select"></span>
+                            <span class="fa fa-star select"></span>
+                            <span class="fa fa-star select"></span>
+                            <span class="fa fa-star select"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>

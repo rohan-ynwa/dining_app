@@ -88,3 +88,158 @@ h1 {
 .active {
     background-color: var(--primary);
 }
+
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    flex-direction: row;
+    height: 15vh;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30vw;
+    margin: 2vw;
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 15vh;
+    align-items: center;
+    width: 40vw;
+}
+
+.filter {
+    margin-left: 0.8vw;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    width: 15vw;
+}
+
+h2 {
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--primary);
+}
+
+h3 {
+    font-size: 0.8rem;
+    font-weight: lighter;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--primary);
+}
+
+#submit-button {
+    font-size: 1rem;
+}
+
+.table {
+    background-color: var(--primary);
+    height: 65vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+}
+
+#menu-content {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#selection {
+    height: 65vh;
+    width: 35vw;
+    overflow: scroll;
+    background-color: var(--secondary);
+}
+
+#info {
+    height: 65vh;
+    width: 55vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5vh;
+    font-size: x-large;
+}
+
+.item {
+    font-family: 'Open Sans', sans-serif;
+    border: 0.1rem solid var(--secondary);
+    padding: 1rem;
+    background-color: var(--secondary);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: #575757;
+    border: 0.1rem solid #575757;
+}
+
+.item-active{
+    font-family: 'Open Sans', sans-serif;
+    border: 0.1rem solid var(--primary);
+    padding: 1rem;
+    background-color: white;
+    border-right: none;
+    color: black;   
+}
+
+.item-active:hover{
+    font-family: 'Open Sans', sans-serif;
+    border: 0.1rem solid var(--primary);
+    padding: 1rem;
+    background-color: white;
+    border-right: none;
+    color: black;   
+}
+
+.filter-button {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.2vh;
+}
+
+.ing-header {
+    height: 10vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.ing-container {
+    height: 40vh;
+    margin-top: 5vh;
+}
+
+li{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.select {
+    color: var(--secondary);
+    font-size: xx-large;
+}
+
+.select:hover {
+    color: orange;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
