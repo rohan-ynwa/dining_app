@@ -21,7 +21,7 @@ document.querySelectorAll('.item').forEach(function(e) {
         currItem = this.id;
         this.classList.add("item-active");
     })
-  });
+  }); 
 
 //form stays in current state
 let form = document.querySelector('form');

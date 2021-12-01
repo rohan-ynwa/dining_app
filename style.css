@@ -62,7 +62,7 @@ h1 {
     align-items: stretch;
 }
 
-.map-img {
+svg {
     max-height: 70vh;
     max-width: 90vw;
 }
@@ -244,3 +244,14 @@ li{
 p {
     font-family: 'Open Sans', sans-serif;
 }
+
+#latin1, #latin2, #dessert, #bakery, #pizza, #greens, #street, #sushi, #noodles, #grill, #naan, #salad {
+    opacity: 0%;
+}
+
+#latin1:hover, #latin2:hover, #dessert:hover, #bakery:hover, #pizza:hover, #greens:hover, #street:hover, #sushi:hover, #noodles:hover, #grill:hover, #naan:hover, #salad:hover {
+    opacity: 50%;
+}
+
+
+

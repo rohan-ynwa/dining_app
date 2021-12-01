@@ -1,30 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Dining Hall App</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/index.js" defer></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
-    </style>
-</head>
-<body>
-    <div class="container">
-        <section id="map">
-            <div class="heading">
-                <h1>UMass Worcester Dining Hall App</h1>
-            </div>
-            <div class="content" id="map-content">
-                <div class="meal-container"> 
-                    <!-- these should be generated depending on whats avalible that day -->
-                    <button class="meal active" id="Breakfast">Breakfast</button>
-                    <button class="meal" id="Lunch">Lunch</button>
-                    <button class="meal" id="Dinner">Dinner</button>
-                    <button class="meal" id="Late Night">Late Night</button>
-                </div>
-                <svg
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
    version="1.1"
    id="svg41"
    width="1600"
@@ -2838,7 +2815,7 @@ X//Z
            x="254.28928"
            y="719.08289" /></text>
       <rect
-         style="fill-opacity:1;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
          id="rect39880"
          width="223.97664"
          height="33.680691"
@@ -2962,7 +2939,7 @@ X//Z
          style="fill:#febe64;fill-opacity:1;fill-rule:evenodd"
          d="M 221.94336,452.56641 V 512 h 148.75391 v -6.41016 h 0.0371 c -0.0114,-0.18235 -0.0238,-0.36465 -0.0371,-0.54687 v -2.69141 h -0.18165 c -1.09975,-17.39609 -10.77643,-33.07117 -25.75781,-41.72461 -6.92467,-3.93184 -14.65796,-6.18757 -22.59179,-6.58984 l -8.74721,-0.29992 0.29991,22.45614 -65.71741,0.29992 1.10025,-22.45614 v 0 h -27.08008 v -1.4707 z" />
       <rect
-         style="fill-opacity:0;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
          id="rect36819"
          width="64.617157"
          height="22.156221"
@@ -2977,7 +2954,7 @@ X//Z
          style="fill:#fdbe5f;fill-opacity:1;fill-rule:evenodd;stroke-width:1.0433"
          d="m 327.4043,297.68164 v 79.10742 h 137.63867 v -79.10742 z m 26.59765,26.47266 h 91.70703 v 20.96875 h -91.70703 z" />
       <rect
-         style="fill-opacity:0;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
          id="rect37189"
          width="91.707031"
          height="20.96875"
@@ -2992,7 +2969,7 @@ X//Z
          style="fill:#fdbe5f;fill-opacity:1;fill-rule:evenodd;stroke-width:0.979534"
          d="m 471.04297,296.99441 v 79.22924 h 121.14079 v -79.22924 z m 18.23189,18.2645 87.11657,1.33454 -3.65623,22.1617 -83.21381,-0.37854 z" />
       <rect
-         style="fill-opacity:0;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
          id="rect37195"
          width="83.460342"
          height="23.496241"
@@ -3006,7 +2983,7 @@ X//Z
          style="fill:#fdbe5f;fill-opacity:1;fill-rule:evenodd;stroke-width:1.29615"
          d="m 632.46774,268.46005 v 88.58058 h 189.71728 v -88.58058 z m 39.98218,30.2911 64.2192,0.45301 0.50824,22.69934 -63.30232,-0.42321 z" />
       <rect
-         style="fill-opacity:0;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
          id="rect37303"
          width="64.72744"
          height="23.152349"
@@ -3020,7 +2997,7 @@ X//Z
          style="fill:#fdbe5f;fill-opacity:1;fill-rule:evenodd;stroke-width:1.2147"
          d="m 826.55727,270.12206 v 86.63839 h 170.35872 v -86.63839 z m 47.86673,29.49856 85.99441,1.45934 2.26747,20.52959 -90.56121,0.11528 z" />
       <rect
-         style="fill-opacity:0;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
          id="rect37411"
          width="88.261879"
          height="21.98893"
@@ -3038,7 +3015,7 @@ X//Z
          x="1221.3998"
          y="478.37323" />
       <rect
-         style="fill-opacity:0;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
          id="rect38196"
          width="65.02668"
          height="23.49914"
@@ -3053,7 +3030,7 @@ X//Z
          style="fill:#fdbe5f;fill-opacity:1;stroke-width:0.968246"
          d="m 1224.3809,451.09961 v 22.06445 h 31.8711 25.496 v -14.29687 h -25.496 v -7.76758 z" />
       <rect
-         style="fill-opacity:0;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
          id="rect38304"
          width="106.2333"
          height="24.082348"
@@ -3067,7 +3044,7 @@ X//Z
          style="fill:#fdc067;fill-opacity:1;stroke:none;stroke-width:0.930424;stroke-miterlimit:4;stroke-dasharray:0.930424, 0.930424;stroke-dashoffset:0;stroke-opacity:1"
          d="m 628.53711,453.28826 v 62.56259 h 33.70312 v 22.93508 h -32.01757 v 15.6086 h 83.13086 v -15.6086 -22.93508 -62.56259 z" />
       <rect
-         style="fill-opacity:0;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
          id="rect38478"
          width="66.929741"
          height="24.574017"
@@ -3082,7 +3059,7 @@ X//Z
          style="fill:#fdc067;fill-opacity:1;stroke-width:0.853531"
          d="m 806.42786,451.85594 0.6663,24.22334 -69.31156,1.23597 -1.03374,77.32537 h 70.5332 15.61524 l 2.46322,-101.96071 z" />
       <rect
-         style="fill-opacity:0;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
          id="rect38586"
          width="68.901047"
          height="25.335815"
@@ -3100,7 +3077,7 @@ X//Z
          style="fill:#fdc067;fill-opacity:1;stroke:none;stroke-width:0.491352;stroke-miterlimit:4;stroke-dasharray:0.491352, 0.491352;stroke-dashoffset:0;stroke-opacity:1"
          d="m 766.01758,558.64648 v 20.37305 l -2.3418,0.39844 55.57422,9.66211 0.14648,-9.74219 h 0.0918 v -6.06445 l 0.0508,-3.36914 -0.0508,0.008 v -11.26563 z" />
       <rect
-         style="fill-opacity:0;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
          id="rect38592"
          width="77.320946"
          height="54.991154"
@@ -3115,7 +3092,7 @@ X//Z
          style="fill:#fdbe5f;fill-opacity:1;fill-rule:evenodd;stroke-width:1.07657"
          d="m 1133.8918,268.63734 v 90.1889 h 128.55 v -90.1889 z m 13.1879,34.65978 c 18.1721,-0.91659 20.3892,0.51103 115.1131,-3.67357 l 0.5455,22.47068 c -115.7592,0.21925 -136.8484,4.45849 -115.6586,-18.79711 z" />
       <rect
-         style="fill-opacity:0;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-miterlimit:4;stroke-dasharray:0.9, 0.9;stroke-dashoffset:0;stroke-opacity:1"
          id="rect37519"
          width="135.88"
          height="24.325659"
@@ -3123,125 +3100,4 @@ X//Z
          y="297.79086" />
     </g>
   </g>
-                </svg>
-            </div>
-        </section>
-        <section id="menu">
-            <div class="heading">
-                <!-- This should be generated -->
-                <h1>Menu at Bakery</h1>
-            </div>
-            <div class="content" id="menu-content">
-                <form class = "filter-form"> 
-                    <div class="filter-container">
-                        <h2>Filter by Diet:</h2>
-                        <div class = "checkbox-container">
-                            <div class = "option">
-                                <h3>Vegetarian</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="1">
-                            </div>
-                            <div class = "option">
-                                <h3>Halal</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="1">
-                            </div>
-                            <div class = "option">
-                                <h3>Antibiotic Free</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="1">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter-container">
-                        <h2>Filter by Allergen:</h2>
-                        <div class = "checkbox-container">
-                            <div class = "option">
-                                <h3>Milk</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="1">
-                            </div>
-                            <div class = "option">
-                                <h3>Gluten</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="1">
-                            </div>
-                            <div class = "option">
-                                <h3>Soy</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="1">
-                            </div>
-                        </div>
-                    </div>
-                    <input type="submit" id="submit-button" value="Filter" class="filter-button">	
-                </form>
-                <div class="table"> 
-                    <div id="selection">
-                        <div class="item">
-                            Buttermilk Pancakes
-                            <div>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                                <span class="fa fa-star-o"></span>
-                            </div>
-                        </div>
-                        <div class="item item-active">
-                            Hot Oatmeal
-                            <div>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                            </div>
-                        </div>
-                        <!-- <div class="item">
-                            Omelet 
-                            <div>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                                <span class="fa fa-star-o"></span>
-                            </div>
-                        </div> -->
-                        <div class="item">
-                            Mini Cheese Danish
-                            <div>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                                <span class="fa fa-star-o"></span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            Chinese Twist Cruller
-                            <div>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                                <span class="fa fa-star-o"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="info">
-                        <div class="ing-header">
-                            Mini Cheese Danish
-                        </div>
-                        <h2 style="color: black; font-size: large;">Ingredients:</h2>
-                        <div class="ing-container">
-                            <li>Sugar</li><li>Eggs</li><li>Modified Corn Starch</li><li> Juice Concentrate</li><li> Enriched Unbleached Flour</li>
-                        </div>
-                        <div>
-                            <p>your rating:</p>
-                            <span class="fa fa-star select"></span>
-                            <span class="fa fa-star select"></span>
-                            <span class="fa fa-star select"></span>
-                            <span class="fa fa-star select"></span>
-                            <span class="fa fa-star select"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</body>
-</html>
+</svg>
