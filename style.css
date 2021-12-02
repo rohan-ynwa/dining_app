@@ -64,7 +64,11 @@ h1 {
 
 svg {
     max-height: 70vh;
-    max-width: 90vw;
+    width: 90vw;
+}
+
+#img-container {
+    background-color: white;
 }
 
 .meal-container {
@@ -85,7 +89,7 @@ svg {
     border-right: 0.01rem solid var(--accent-alt);
 }
 
-.active {
+.menu-active {
     background-color: var(--primary);
 }
 
@@ -245,13 +249,24 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
-#latin1, #latin2, #dessert, #bakery, #pizza, #greens, #street, #sushi, #noodles, #grill, #naan, #salad {
+/* #latin1, #latin2, #dessert, #bakery, #pizza, #greens, #street, #sushi, #noodles, #grill, #naan, #salad {
     opacity: 0%;
+    cursor: pointer;
 }
 
 #latin1:hover, #latin2:hover, #dessert:hover, #bakery:hover, #pizza:hover, #greens:hover, #street:hover, #sushi:hover, #noodles:hover, #grill:hover, #naan:hover, #salad:hover {
-    opacity: 50%;
+    opacity: 70%;
+} */
+
+.station {
+    opacity: 0%;
+    cursor: pointer;
 }
 
+.station:hover {
+    opacity: 70%;
+}
 
-
+.station-active {
+    opacity: 100%;
+}
