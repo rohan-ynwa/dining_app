@@ -6,6 +6,8 @@ let currStation = "";
 const buttons = document.querySelectorAll(".meal");
 const selections = document.querySelectorAll(".item");
 const stations = document.querySelectorAll(".station");
+const stars = document.querySelectorAll(".select");
+
 
 //to select menu (lunch, dinner etc.)
 document.querySelectorAll('.meal').forEach(function(e) {
@@ -42,3 +44,30 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 })
 
+//star rating
+document.querySelectorAll('.select').forEach(function(e) {
+    
+    //on click
+    e.addEventListener('click', function() {
+        stars.forEach(i => {i.classList.remove("select-active")})
+        for (let i = 1; i <= 5; i++) {
+            stars[i - 1].classList.add('select-active');
+            if (parseInt(e.id) === i) {
+                break;
+            }
+        }
+    })
+
+    //on hover
+    e.addEventListener('mouseover', function() {
+        for (let i = 1; i <= 5; i++) {
+            stars[i - 1].classList.add('select-active-hover');
+            if (parseInt(e.id) === i) {
+                break;
+            }
+        }
+    })
+    e.addEventListener('mouseout', function() {
+        stars.forEach(i => {i.classList.remove("select-active-hover")})
+    })
+}); 

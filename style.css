@@ -8,6 +8,7 @@
 :root {
     --primary: #ffffff;
     --secondary: #1f1f1f;
+    --secondary-alt: #3a3a3a;
     --accent: #881c1c;
     --accent-alt: #5d2a2c;
   }
@@ -109,9 +110,9 @@ svg {
 .checkbox-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 30vw;
-    margin: 2vw;
+    margin: 1vh;
 }
 
 .filter-container {
@@ -245,14 +246,20 @@ li{
 .select {
     color: var(--secondary);
     font-size: xx-large;
+    cursor: pointer;
 }
 
-.select:hover {
+.select-active {
+    color: orange;
+}
+
+.select-active-hover {
     color: orange;
 }
 
 p {
     font-family: 'Open Sans', sans-serif;
+    margin: 2vh;
 }
 
 
@@ -267,6 +274,29 @@ p {
 
 .station-active {
     opacity: 100%;
-    filter: brightness(120%);
 }
 
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#star-button {
+    background-color: var(--secondary);
+    color: var(--primary);
+    min-height: 2vh;
+    box-sizing: border-box;
+    border: 0.1rem solid var(--accent);
+    border-radius: 0.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 0.8vh;
+    margin-left: 1.5vw;
+}
+
+#star-button:hover {
+    background-color: var(--secondary-alt);
+}
