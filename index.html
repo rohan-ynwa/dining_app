@@ -1037,28 +1037,30 @@
                         <div class="ing-container">
                             <li>Sugar</li><li>Eggs</li><li>Modified Corn Starch</li><li> Juice Concentrate</li><li> Enriched Unbleached Flour</li>
                         </div>
-                        <form>
-                            <p>Add your rating:</p>
-                            <label>
-                                <input type="radio" name="star" value="1">
-                                <span class="fa fa-star select" id="1"></span>
-                            </label>
-                            <label>
-                                <input type="radio" name="star" value="2">
-                                <span class="fa fa-star select" id="2"></span>
-                            </label>
-                            <label>
-                                <input type="radio" name="star" value="3">
-                                <span class="fa fa-star select" id="3"></span>
-                            </label>
-                            <label>
-                                <input type="radio" name="star" value="4">
-                                <span class="fa fa-star select" id="4"></span>
-                            </label>
-                            <label>
-                                <input type="radio" name="star" value="5">
-                                <span class="fa fa-star select" id="5"></span>
-                            </label>
+                        <form id="star-form">
+                            <p>Would I recommend this food:</p>
+                            <div id="star-container">
+                                <label title="Five Stars: Strongly Agree">
+                                    <input type="radio" name="star" value="5">
+                                    <span class="fa fa-star select" id="5"></span>
+                                </label>
+                                <label title="Four Stars: Agree">
+                                    <input type="radio" name="star" value="4">
+                                    <span class="fa fa-star select" id="4"></span>
+                                </label>
+                                <label title="Three Stars: Neither agree or disagree">
+                                    <input type="radio" name="star" value="3">
+                                    <span class="fa fa-star select" id="3"></span>
+                                </label>
+                                <label title="Two Stars: Disagree">
+                                    <input type="radio" name="star" value="2">
+                                    <span class="fa fa-star select" id="2"></span>
+                                </label>
+                                <label title="One Star: Strongly Disagree">
+                                    <input type="radio" name="star" value="1">
+                                    <span class="fa fa-star select" id="1"></span>
+                                </label>
+                            </div>
                             <button type="button" id="star-button">Submit</button>
                         </form>
                     </div>

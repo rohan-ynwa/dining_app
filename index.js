@@ -2,6 +2,7 @@
 let currMenu = "";
 let currItem = "";
 let currStation = "";
+let currStar = "";
 
 const buttons = document.querySelectorAll(".meal");
 const selections = document.querySelectorAll(".item");
@@ -46,28 +47,16 @@ form.addEventListener('submit', (e) => {
 
 //star rating
 document.querySelectorAll('.select').forEach(function(e) {
-    
+
     //on click
     e.addEventListener('click', function() {
         stars.forEach(i => {i.classList.remove("select-active")})
         for (let i = 1; i <= 5; i++) {
-            stars[i - 1].classList.add('select-active');
+            stars[5 - i].classList.add('select-active');
             if (parseInt(e.id) === i) {
+                console.log(e);
                 break;
             }
         }
-    })
-
-    //on hover
-    e.addEventListener('mouseover', function() {
-        for (let i = 1; i <= 5; i++) {
-            stars[i - 1].classList.add('select-active-hover');
-            if (parseInt(e.id) === i) {
-                break;
-            }
-        }
-    })
-    e.addEventListener('mouseout', function() {
-        stars.forEach(i => {i.classList.remove("select-active-hover")})
     })
 }); 

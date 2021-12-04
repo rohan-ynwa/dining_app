@@ -253,13 +253,21 @@ li{
     color: orange;
 }
 
-.select-active-hover {
-    color: orange;
+label:hover  > .select,
+label:hover ~ label > .select { color: #FFD700;  } 
+
+/* makes the order backwards do the ~ selector can select all the stars after */
+#star-container {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    display: inline-block;
+    margin-left: 20%;
 }
 
 p {
     font-family: 'Open Sans', sans-serif;
     margin: 2vh;
+    font-size: 1.2rem;
 }
 
 
@@ -300,3 +308,5 @@ p {
 #star-button:hover {
     background-color: var(--secondary-alt);
 }
+
+
