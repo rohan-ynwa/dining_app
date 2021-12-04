@@ -30,8 +30,9 @@ document.querySelectorAll('.station').forEach(function(e) {
     e.addEventListener('click', function() {
         stations.forEach(i => {i.classList.remove("station-active")})
         currStation = this.id;
-        this.classList.add("station-active");
+        this.classList.add('station-active');
         document.getElementById('station-head').innerHTML = "Menu at " + currStation;
+        document.getElementById('menu').scrollIntoView({behaviour: "smooth"});
     })
   }); 
 

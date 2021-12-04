@@ -7,7 +7,7 @@
 
 :root {
     --primary: #ffffff;
-    --secondary: #333333;
+    --secondary: #1f1f1f;
     --accent: #881c1c;
     --accent-alt: #5d2a2c;
   }
@@ -100,7 +100,10 @@ svg {
     justify-content: center;
     width: 90vw;
     flex-direction: row;
-    height: 15vh;
+    height: 14vh;
+    background-color: var(--secondary);
+    margin-bottom: 1vh;
+    padding: 1vh;
 }
 
 .checkbox-container {
@@ -114,10 +117,12 @@ svg {
 .filter-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: 15vh;
     align-items: center;
     width: 40vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 .filter {
@@ -134,6 +139,7 @@ h2 {
     font-size: 1rem;
     font-family: 'Open Sans', sans-serif;
     color: var(--primary);
+    margin: 1vh;
 }
 
 h3 {
@@ -249,14 +255,6 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
-/* #latin1, #latin2, #dessert, #bakery, #pizza, #greens, #street, #sushi, #noodles, #grill, #naan, #salad {
-    opacity: 0%;
-    cursor: pointer;
-}
-
-#latin1:hover, #latin2:hover, #dessert:hover, #bakery:hover, #pizza:hover, #greens:hover, #street:hover, #sushi:hover, #noodles:hover, #grill:hover, #naan:hover, #salad:hover {
-    opacity: 70%;
-} */
 
 .station {
     opacity: 0%;
@@ -264,9 +262,11 @@ p {
 }
 
 .station:hover {
-    opacity: 70%;
+    opacity: 50%;
 }
 
 .station-active {
     opacity: 100%;
+    filter: brightness(120%);
 }
+
