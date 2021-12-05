@@ -113,11 +113,11 @@ svg {
     justify-content: space-evenly;
     width: 30vw;
     margin: 1vh;
+    flex-wrap: wrap;
 }
 
 .filter-container {
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     height: 15vh;
     align-items: center;
@@ -133,7 +133,7 @@ svg {
 .option {
     display: flex;
     justify-content: center;
-    width: 15vw;
+    width: 10vw;
 }
 
 h2 {
