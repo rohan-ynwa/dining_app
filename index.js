@@ -60,3 +60,20 @@ document.querySelectorAll('.select').forEach(function(e) {
         }
     })
 }); 
+
+
+
+// async(() => await fetch('http://127.0.0.1:8000/items').then(data => {
+//     test = data.json()
+// }))
+
+async function test() {
+    await fetch('http://127.0.0.1:8000/items').then(data => {
+        let x = ''
+        x = data.json()
+        console.log(x)
+    })
+}
+
+test()
+

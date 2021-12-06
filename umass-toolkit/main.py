@@ -4,8 +4,21 @@ import requests
 import urllib.parse
 from umass_toolkit import dining_utils
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+origins = [
+    'http://127.0.0.1:5500/'
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get('/items')
 def get_menu():
