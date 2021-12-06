@@ -1,30 +1,42 @@
-//get data on window load
-window.onload = async function () {
-    await fetch('http://127.0.0.1:8000/items').then(x => {
-        let data = '';
-        data = x.json();
-        console.log
-    })
-}
-
 //current selection
-let currMenu = "Breakfast";
+let currMenu = "";
 let currItem = "";
 let currStation = "";
 let currStar = "";
+let allData = [];
+let currData = [];
 
+
+//get data on window load
+window.onload = async function () {
+    await fetch('http://127.0.0.1:8000/items', {
+      method: 'GET',
+    })
+    .then(function(response) {
+      return response.json();
+    }).then(x => {
+        allData = x;
+    }).then(changeMenu(document.getElementById('Breakfast')))
+}
+
+function changeMenu(elem) {
+    currMenu = elem.id;
+    elem.classList.add("menu-active");
+    currData = allData.filter(x => x["meal-name"] == currMenu.toLowerCase());
+}
+
+//all components
 const buttons = document.querySelectorAll(".meal");
 const selections = document.querySelectorAll(".item");
 const stations = document.querySelectorAll(".station");
 const stars = document.querySelectorAll(".select");
 
-
 //to select menu (lunch, dinner etc.)
 document.querySelectorAll('.meal').forEach(function(e) {
     e.addEventListener('click', function() {
-        buttons.forEach(i => {i.classList.remove("menu-active")})
-        currMenu = this.id;
-        this.classList.add("menu-active");
+        console.log(currData);
+        buttons.forEach(i => {i.classList.remove("menu-active")});
+        changeMenu(this);
     })
   });
 
@@ -56,7 +68,6 @@ form.addEventListener('submit', (e) => {
 
 //star rating
 document.querySelectorAll('.select').forEach(function(e) {
-
     //on click
     e.addEventListener('click', function() {
         stars.forEach(i => {i.classList.remove("select-active")})
@@ -72,8 +83,7 @@ document.querySelectorAll('.select').forEach(function(e) {
 
 
 
-// async(() => await fetch('http://127.0.0.1:8000/items').then(data => {
-//     test = data.json()
-// }))
+
+
 
 
