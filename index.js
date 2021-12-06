@@ -184,8 +184,14 @@ document.querySelectorAll('.select').forEach(function(e) {
 }); 
 
 
+function submitStarRating() {
+    const starButton = document.getElementById("star-button")
 
+    starButton.addEventListener("click", () => {
+        
+    });
 
+}
 
-
+console.log(new Date().toLocaleTimeString())
 
