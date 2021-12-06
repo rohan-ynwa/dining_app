@@ -6,6 +6,11 @@ let currStar = "";
 let allData = [];
 let currData = [];
 
+function changeMenu(elem, data) {
+    currMenu = elem.id;
+    elem.classList.add("menu-active");
+    currData = data.filter(x => x["meal-name"] == currMenu.toLowerCase());
+}
 
 //get data on window load
 window.onload = async function () {
@@ -16,13 +21,8 @@ window.onload = async function () {
       return response.json();
     }).then(x => {
         allData = x;
-    }).then(changeMenu(document.getElementById('Breakfast')))
-}
-
-function changeMenu(elem) {
-    currMenu = elem.id;
-    elem.classList.add("menu-active");
-    currData = allData.filter(x => x["meal-name"] == currMenu.toLowerCase());
+        return x;
+    }).then(x => {changeMenu(document.getElementById('Breakfast'), x)})
 }
 
 //all components
@@ -34,9 +34,8 @@ const stars = document.querySelectorAll(".select");
 //to select menu (lunch, dinner etc.)
 document.querySelectorAll('.meal').forEach(function(e) {
     e.addEventListener('click', function() {
-        console.log(currData);
         buttons.forEach(i => {i.classList.remove("menu-active")});
-        changeMenu(this);
+        changeMenu(this, allData);
     })
   });
 
