@@ -1,5 +1,13 @@
+//get data on window load
+window.onload = async function () {
+    await fetch('http://127.0.0.1:8000/items').then(x => {
+        let data = '';
+        data = x.json();
+    })
+}
+
 //current selection
-let currMenu = "";
+let currMenu = "Breakfast";
 let currItem = "";
 let currStation = "";
 let currStar = "";
@@ -34,7 +42,7 @@ document.querySelectorAll('.station').forEach(function(e) {
         stations.forEach(i => {i.classList.remove("station-active")})
         currStation = this.id;
         this.classList.add('station-active');
-        document.getElementById('station-head').innerHTML = "Menu at " + currStation;
+        document.getElementById('station-head').innerHTML = "Menu at " + currStation + " station for " + currMenu;
         document.getElementById('menu').scrollIntoView({behaviour: "smooth"});
     })
   }); 
@@ -67,13 +75,4 @@ document.querySelectorAll('.select').forEach(function(e) {
 //     test = data.json()
 // }))
 
-async function test() {
-    await fetch('http://127.0.0.1:8000/items').then(data => {
-        let x = ''
-        x = data.json()
-        console.log(x)
-    })
-}
-
-test()
 
