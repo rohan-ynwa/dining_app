@@ -3,6 +3,7 @@ window.onload = async function () {
     await fetch('http://127.0.0.1:8000/items').then(x => {
         let data = '';
         data = x.json();
+        console.log
     })
 }
 
