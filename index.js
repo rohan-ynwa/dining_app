@@ -3,19 +3,39 @@ let currMenu = "";
 let currItem = "";
 let currStation = "";
 let currStar = "";
+let allData = [];
+let currData = [];
 
+function changeMenu(elem, data) {
+    currMenu = elem.id;
+    elem.classList.add("menu-active");
+    currData = data.filter(x => x["meal-name"] == currMenu.toLowerCase());
+}
+
+//get data on window load
+window.onload = async function () {
+    await fetch('http://127.0.0.1:8000/items', {
+      method: 'GET',
+    })
+    .then(function(response) {
+      return response.json();
+    }).then(x => {
+        allData = x;
+        return x;
+    }).then(x => {changeMenu(document.getElementById('Breakfast'), x)})
+}
+
+//all components
 const buttons = document.querySelectorAll(".meal");
 const selections = document.querySelectorAll(".item");
 const stations = document.querySelectorAll(".station");
 const stars = document.querySelectorAll(".select");
 
-
 //to select menu (lunch, dinner etc.)
 document.querySelectorAll('.meal').forEach(function(e) {
     e.addEventListener('click', function() {
-        buttons.forEach(i => {i.classList.remove("menu-active")})
-        currMenu = this.id;
-        this.classList.add("menu-active");
+        buttons.forEach(i => {i.classList.remove("menu-active")});
+        changeMenu(this, allData);
     })
   });
 
@@ -34,7 +54,7 @@ document.querySelectorAll('.station').forEach(function(e) {
         stations.forEach(i => {i.classList.remove("station-active")})
         currStation = this.id;
         this.classList.add('station-active');
-        document.getElementById('station-head').innerHTML = "Menu at " + currStation;
+        document.getElementById('station-head').innerHTML = "Menu at " + currStation + " station for " + currMenu;
         document.getElementById('menu').scrollIntoView({behaviour: "smooth"});
     })
   }); 
@@ -47,7 +67,6 @@ form.addEventListener('submit', (e) => {
 
 //star rating
 document.querySelectorAll('.select').forEach(function(e) {
-
     //on click
     e.addEventListener('click', function() {
         stars.forEach(i => {i.classList.remove("select-active")})
@@ -62,19 +81,14 @@ document.querySelectorAll('.select').forEach(function(e) {
 }); 
 
 
+function submitStarRating() {
+    const starButton = document.getElementById("star-button")
 
-// async(() => await fetch('http://127.0.0.1:8000/items').then(data => {
-//     test = data.json()
-// }))
+    starButton.addEventListener("click", () => {
+        
+    });
 
-async function test() {
-    await fetch('http://127.0.0.1:8000/items').then(data => {
-        let x = ''
-        x = data.json()
-        console.log(x)
-    })
 }
 
 console.log(new Date().toLocaleTimeString())
-test()
 
