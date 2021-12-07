@@ -183,28 +183,6 @@ document.querySelectorAll('.select').forEach(function(e) {
     })
 }); 
 
-submitStarRating();
-
-
-function submitStarRating() {
-    const starButton = document.getElementById("star-button");
-    let starCount = 0;
-
-    starButton.addEventListener("click", () => {
-        for(let i = 5; i>0; i++) {
-            if(document.getElementById(JSON.stringify(i)).classList.contains("select-active")){
-                starCount = i;
-                break;
-            }
-        }
-    });
-
-   const activeItem = document.getElementsByClassName("item-active");
-   console.log(activeItem[0]);
-   for(let s = 0; s < starCount; s++){
-        console.log('ONE STAR');
-    }
-}
 
 console.log(new Date().toLocaleTimeString())
 
