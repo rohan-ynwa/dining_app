@@ -17,7 +17,7 @@ function changeMenu(elem, data) {
 
 //get data on window load
 window.onload = async function () {
-    await fetch('http://127.0.0.1:8000/items', {
+    await fetch('https://sleepy-inlet-13949.herokuapp.com/items', {
       method: 'GET',
     })
     .then(function(response) {
