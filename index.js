@@ -12,6 +12,7 @@ function changeMenu(elem, data) {
     currMenu = elem.id;
     elem.classList.add("menu-active");
     currData = data.filter(x => x["meal-name"] == currMenu.toLowerCase());
+    hideNA(elem.id);
 }
 
 //get data on window load
@@ -43,6 +44,37 @@ document.querySelectorAll('.meal').forEach(function(e) {
     })
   });
 
+//hide not avalible items
+function hideNA(menu) {
+    console.log(document.querySelectorAll('.all-label'));
+    document.querySelectorAll('.all-label').forEach(x => x.classList.remove("station-inactive"));
+    switch(menu) {
+        case("Breakfast"):
+        document.querySelectorAll('.all-label').forEach(x => {
+            if ((x.id != "sushi-label") && (x.id != "breads-label") && (x.id != "grill-label")) {
+                x.classList.add("station-inactive");
+            }
+        })
+            break;
+        case("Lunch"):
+            document.getElementById("latin1-label").classList.add("station-inactive");
+            break;
+        case("Dinner"):
+            document.getElementById("latin1-label").classList.add("station-inactive");
+            break;
+        case("Late Night"):
+            document.querySelectorAll('.all-label').forEach(x => {
+                if ((x.id != "pizza-label") && (x.id != "latin1-label") && (x.id != "grill-label")) {
+                    x.classList.add("station-inactive");
+                }
+            })
+            break;
+        default:
+            break;
+    }
+}
+
+//change station
 function changeStation(station, data, menu) {
     let dataAtStation = [];
     let stationName = "";
@@ -96,7 +128,7 @@ function changeStation(station, data, menu) {
             case ("Bakery"):
                 stationName = 'Desserts';
                 break;
-            case ("Desserts"):
+            case ("Dessert"):
                 stationName = 'Desserts';
                 break;
             case ("Soup"):
@@ -131,6 +163,7 @@ document.querySelectorAll('.station').forEach(function(e) {
             elem.classList.add('item');
             elem.innerHTML = e["dish-name"];
             selectionMenu.appendChild(elem);
+            elem.appendChild(starGen());
             selections.push(elem);
             selectionsData.push(e);
             addClick(elem, e);
@@ -138,6 +171,25 @@ document.querySelectorAll('.station').forEach(function(e) {
         document.getElementById('menu').scrollIntoView({behaviour: "smooth"});
     })
   }); 
+
+//generate stars
+function starGen() {
+    let starDiv = document.createElement('div');
+    let stars = Math.floor((Math.random() * 5) + 1);
+
+    for (i = 1; i <= 5; i++) {
+        let e = document.createElement('span');
+        if (i <= stars) {
+            e.classList.add("fa", "fa-star", "checked");
+        }
+        else {
+            e.classList.add("fa", "fa-star-o");
+        }
+        starDiv.appendChild(e);
+    }
+
+    return starDiv;
+}
 
 //to select item on menu 
 function addClick(elem, e) {
@@ -176,16 +228,7 @@ document.querySelectorAll('.select').forEach(function(e) {
     })
 }); 
 
-
-function submitStarRating() {
-    const starButton = document.getElementById("star-button")
-
-    starButton.addEventListener("click", () => {
-        
-    });
-
-}
-
+//get live meal
 function liveMeal() {
     let result = ''
     let date = new Date().toLocaleTimeString('en-US', { hour12: false })
@@ -203,35 +246,41 @@ function liveMeal() {
     if (date >= breakfastStart && date < breakfastEnd) {
         let elem = document.createElement('div');
         elem.classList.add('live');
+        elem.title = "Live";
         document.getElementById('Breakfast').appendChild(elem);
         return 'Breakfast'
     }
     if (date >= lunchStart && date < lunchEnd) {
         let elem = document.createElement('div');
         elem.classList.add('live');
+        elem.title = "Live";
         document.getElementById('Lunch').appendChild(elem);
         return 'Lunch'
     }
     if (date >= dinnerStart && date < dinnerEnd) {
         let elem = document.createElement('div');
         elem.classList.add('live');
+        elem.title = "Live";
         document.getElementById('Dinner').appendChild(elem);
         return 'Dinner'
     }
     if (date >= lateNightStart && date < lateNightEnd) {
         let elem = document.createElement('div');
         elem.classList.add('live');
+        elem.title = "Live";
         document.getElementById('Late Night').appendChild(elem);
         return 'Late Night'
     }
 }
 
+//filter form
 document.getElementById('filter-form').onsubmit = function() { 
     filteredData=[];
     var checkboxesAl = document.querySelectorAll('input[name="all"]:checked');
     var checkboxesDt = document.querySelectorAll('input[name="diet"]:checked');
-    filteredData = selections;
-    checkboxesAl.forEach(x => filter(x, "allergens"));
+    filteredData = selections.map((x) => x);
+    checkboxesAl.forEach(x => filter(x, "allergens", true));
+    checkboxesDt.forEach(x => filter(x, "diets", false));
     let selectionMenu = document.getElementById('selection');
     selectionMenu.innerHTML = '';
     filteredData.forEach(e => {
@@ -240,11 +289,11 @@ document.getElementById('filter-form').onsubmit = function() {
     return false;
 };
 
-function filter (f, v) {
+//filter helper
+function filter (f, v, remove) {
     let toFilter = [];
     for (let i = 0; i < selectionsData.length; i++) {
-        console.log(f, selectionsData[i][v].map(x => x.trim()), selectionsData[i][v].map(x => x.trim()).includes(f.value));
-        if (selectionsData[i][v].map(x => x.trim()).includes(f.value)) {
+        if (selectionsData[i][v].map(x => x.trim()).includes(f.value) === remove) {
             toFilter.push(i);
         }
     }
