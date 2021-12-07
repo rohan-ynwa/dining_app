@@ -95,7 +95,7 @@ svg {
     background-color: var(--primary);
 }
 
-.filter-form {
+#filter-form {
     display: flex;
     flex-direction: column;
     align-items: stretch;

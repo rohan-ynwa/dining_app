@@ -949,37 +949,37 @@
                 <h1 id="station-head">Select a location on the map</h1>
             </div>
             <div class="content" id="menu-content">
-                <form class = "filter-form"> 	
+                <form id = "filter-form"> 	
                     <div class="filter-container">
                         <h2>Add Diet:</h2>
                         <div class = "checkbox-container">
                             <div class = "option">
                                 <h3>Vegetarian</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Vegetarian">
+                                <input type="checkbox" name="diet" class = "filter" value="Vegetarian" id="Vegetarian">
                             </div>
                             <div class = "option">
                                 <h3>Halal</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Halal">
+                                <input type="checkbox" name="diet" class = "filter" value="Halal" id="Halal">
                             </div>
                             <div class = "option">
                                 <h3>Antibiotic Free</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Antibiotic Free">
+                                <input type="checkbox" name="diet" class = "filter" value="Antibiotic Free" id="Antibiotic">
                             </div>
                             <div class = "option">
                                 <h3>Local</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Local">
+                                <input type="checkbox" name="diet" class = "filter" value="Local" id="Local">
                             </div>
                             <div class = "option">
                                 <h3>Sustainable</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Sustainable">
+                                <input type="checkbox" name="diet" class = "filter" value="Sustainable" id="value">
                             </div>
                             <div class = "option">
                                 <h3>Whole Grain</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Whole Grain">
+                                <input type="checkbox" name="diet" class = "filter" value="Whole Grain" id="Whole">
                             </div>
                             <div class = "option">
                                 <h3>Plant Based</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Plant Based">
+                                <input type="checkbox" name="diet" class = "filter" value="Plant Based" id="Plant">
                             </div>
                         </div>
                     </div>
@@ -988,102 +988,61 @@
                         <div class = "checkbox-container">
                             <div class = "option">
                                 <h3>Milk</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Milk">
+                                <input type="checkbox" name="all" class = "filter" value="Milk">
                             </div>
                             <div class = "option">
                                 <h3>Gluten</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Gluten">
+                                <input type="checkbox" name="all" class = "filter" value="Gluten">
                             </div>
                             <div class = "option">
                                 <h3>Egg</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Egg">
+                                <input type="checkbox" name="all" class = "filter" value="Eggs">
                             </div>
                             <div class = "option">
                                 <h3>Fish</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Fish">
+                                <input type="checkbox" name="all" class = "filter" value="Fish">
                             </div>
                             <div class = "option">
                                 <h3>Shellfish</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Shellfish">
+                                <input type="checkbox" name="all" class = "filter" value="Shellfish">
                             </div>
                             <div class = "option">
                                 <h3>Peanuts</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Peanuts">
+                                <input type="checkbox" name="all" class = "filter" value="Peanuts">
                             </div>
                             <div class = "option">
                                 <h3>Tree Nut</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Tree Nut">
+                                <input type="checkbox" name="all" class = "filter" value="Tree Nut">
                             </div>
                             <div class = "option">
                                 <h3>Corn</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Corn">
+                                <input type="checkbox" name="all" class = "filter" value="Corn">
                             </div>
                             <div class = "option">
                                 <h3>Sesame</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Sesame">
+                                <input type="checkbox" name="all" class = "filter" value="Sesame">
                             </div>
                             <div class = "option">
                                 <h3>Wheat</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Wheat">
+                                <input type="checkbox" name="all" class = "filter" value="Wheat">
                             </div>
                             <div class = "option">
-                                <h3>Gluten</h3>
-                                <input type="checkbox" name="diet" class = "filter" value="Gluten">
+                                <h3>Soy</h3>
+                                <input type="checkbox" name="all" class = "filter" value="Soy">
                             </div>
+                           
                         </div>
                     </div>
                     <input type="submit" id="submit-button" value="Filter" class="filter-button">
                 </form>
                 <div class="table"> 
                     <div id="selection">
-                        <!-- <div class="item">
-                            Buttermilk Pancakes
-                            <div>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                                <span class="fa fa-star-o"></span>
-                            </div>
-                        </div>
-                        <div class="item item-active">
-                            Hot Oatmeal
-                            <div>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            Mini Cheese Danish
-                            <div>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                                <span class="fa fa-star-o"></span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            Chinese Twist Cruller
-                            <div>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                                <span class="fa fa-star-o"></span>
-                            </div>
-                        </div> -->
                     </div>
                     <div id="info">
                         <div id="ing-header">
-                            <!-- Mini Cheese Danish -->
                         </div>
                         <h2 style="color: black; font-size: large;">Ingredients:</h2>
                         <div id="ing-container">
-                            <!-- <li>Sugar</li><li>Eggs</li><li>Modified Corn Starch</li><li> Juice Concentrate</li><li> Enriched Unbleached Flour</li> -->
                         </div>
                         <form id="star-form">
                             <p>Would I recommend this food:</p>
