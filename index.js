@@ -90,5 +90,34 @@ function submitStarRating() {
 
 }
 
-console.log(new Date().toLocaleTimeString())
+function liveMeal() {
+    let result = ''
+    let date = new Date().toLocaleTimeString('en-US', { hour12: false })
+    // year, month, day, hours, mins, seconds
+    let breakfastStart = new Date(2021, 0, 1, 7).toLocaleTimeString('en-US', { hour12: false })
+    let breakfastEnd = new Date(2021, 0, 1, 11).toLocaleTimeString('en-US', { hour12: false })
+    let lunchStart = new Date(2021, 0, 1, 11).toLocaleTimeString('en-US', { hour12: false })
+    let lunchEnd = new Date(2021, 0, 1, 16, 30).toLocaleTimeString('en-US', { hour12: false })
+    let dinnerStart = new Date(2021, 0, 1, 16, 30).toLocaleTimeString('en-US', { hour12: false })
+    let dinnerEnd = new Date(2021, 0, 1, 21).toLocaleTimeString('en-US', { hour12: false })
+    let lateNightStart = new Date(2021, 0, 1, 21).toLocaleTimeString('en-US', { hour12: false })
+    let lateNightEnd = new Date(2021, 0, 1, 0).toLocaleTimeString('en-US', { hour12: false })
 
+    if (date >= breakfastStart && date < breakfastEnd) {
+        // console.log('b')
+        return 'Breakfast'
+    }
+    if (date >= lunchStart && date < lunchEnd) {
+        // console.log('l')
+        return 'Lunch'
+    }
+    if (date >= dinnerStart && date < dinnerEnd) {
+        // console.log('d')
+        return 'Dinner'
+    }
+    if (date >= lateNightStart && date < lateNightEnd) {
+        // console.log('ln')
+        return 'Late Night'
+    }
+
+}
