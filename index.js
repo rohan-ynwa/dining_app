@@ -58,6 +58,7 @@ function hideNA(menu) {
             break;
         case("Lunch"):
             document.getElementById("latin1-label").classList.add("station-inactive");
+            document.getElementById("sushi-label").classList.add("station-inactive");
             break;
         case("Dinner"):
             document.getElementById("latin1-label").classList.add("station-inactive");
