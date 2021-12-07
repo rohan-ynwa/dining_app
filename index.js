@@ -6,6 +6,7 @@ let currStar = "";
 let allData = [];
 let currData = [];
 let dataAtStation= [];
+let filteredData = [];
 
 function changeMenu(elem, data) {
     currMenu = elem.id;
@@ -32,6 +33,7 @@ const buttons = document.querySelectorAll(".meal");
 const stations = document.querySelectorAll(".station");
 const stars = document.querySelectorAll(".select");
 let selections = [];
+let selectionsData = [];
 
 //to select menu (lunch, dinner etc.)
 document.querySelectorAll('.meal').forEach(function(e) {
@@ -64,10 +66,10 @@ function changeStation(station, data, menu) {
     
     else {
         switch (station) {
-            case ("Latino1"):
+            case ("Latin1"):
                 stationName = "Latino 1  WOR";
                 break;
-            case ("Latino2"):
+            case ("Latin2"):
                 stationName = "Latino 2  WOR";
                 break;
             case ("Pizza"):
@@ -122,12 +124,15 @@ document.querySelectorAll('.station').forEach(function(e) {
         dataAtStation = changeStation(currStation, currData, currMenu);
         let selectionMenu = document.getElementById('selection');
         selectionMenu.innerHTML = '';
+        selections = [];
+        selectionsData = [];
         dataAtStation.forEach(e => {
             let elem = document.createElement('div');
             elem.classList.add('item');
             elem.innerHTML = e["dish-name"];
             selectionMenu.appendChild(elem);
             selections.push(elem);
+            selectionsData.push(e);
             addClick(elem, e);
         })
         document.getElementById('menu').scrollIntoView({behaviour: "smooth"});
@@ -145,24 +150,11 @@ function addClick(elem, e) {
             ing.classList.add('ing');
             ing.innerHTML = i;
             document.getElementById('ing-container').appendChild(ing);
-            console.log(i);
         });
         currItem = this.id;
         this.classList.add("item-active");
     })
 }; 
-
-
-// //updates ingrediants 
-// function showInfo(df) {
-//     document.getElementById('ing-header').innerHTML = '';
-//     document.getElementById('ing-header').innerHTML = df["dish-name"];
-//     document.getElementById('ing-container').innerHTML = '';
-//     df[ingredient-list].forEach(e => {
-//         let elem = document.createElement('div').innerHTML = e;
-//         document.getElementById('ing-header').appendChild(elem);
-//     });
-// }
 
 //form stays in current state
 let form = document.querySelector('form');
@@ -232,5 +224,32 @@ function liveMeal() {
         document.getElementById('Late Night').appendChild(elem);
         return 'Late Night'
     }
-
 }
+
+document.getElementById('filter-form').onsubmit = function() { 
+    filteredData=[];
+    var checkboxesAl = document.querySelectorAll('input[name="all"]:checked');
+    var checkboxesDt = document.querySelectorAll('input[name="diet"]:checked');
+    filteredData = selections;
+    checkboxesAl.forEach(x => filter(x, "allergens"));
+    let selectionMenu = document.getElementById('selection');
+    selectionMenu.innerHTML = '';
+    filteredData.forEach(e => {
+        selectionMenu.appendChild(e);
+    })
+    return false;
+};
+
+function filter (f, v) {
+    let toFilter = [];
+    for (let i = 0; i < selectionsData.length; i++) {
+        console.log(f, selectionsData[i][v].map(x => x.trim()), selectionsData[i][v].map(x => x.trim()).includes(f.value));
+        if (selectionsData[i][v].map(x => x.trim()).includes(f.value)) {
+            toFilter.push(i);
+        }
+    }
+    for (let i = 0; i < toFilter.length; i++) { 
+        filteredData.splice((toFilter[i] - i), 1);
+    }
+}
+
