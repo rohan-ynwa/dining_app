@@ -82,6 +82,7 @@ svg {
 
 .meal{
     border: none;
+    height: 5vh;
     background-color: rgb(202, 202, 202);
     font-size: 1rem;
     font-weight: bold;
@@ -313,4 +314,13 @@ p {
     background-color: var(--secondary-alt);
 }
 
+.live {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: rgb(212, 0, 0);
+    border-radius: 10rem;
+    margin-left: 95%;
+    opacity: 100%;
+    margin-bottom: 80%;
+}
 

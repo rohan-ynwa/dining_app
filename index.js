@@ -23,7 +23,8 @@ window.onload = async function () {
     }).then(x => {
         allData = x;
         return x;
-    }).then(x => {changeMenu(document.getElementById('Breakfast'), x)})
+    }).then(x => {changeMenu(document.getElementById(liveMeal()), x)
+    })
 }
 
 //all components
@@ -196,6 +197,7 @@ function submitStarRating() {
 function liveMeal() {
     let result = ''
     let date = new Date().toLocaleTimeString('en-US', { hour12: false })
+    // let date = new Date(2021, 0, 1, 23).toLocaleTimeString('en-US', { hour12: false })
     // year, month, day, hours, mins, seconds
     let breakfastStart = new Date(2021, 0, 1, 7).toLocaleTimeString('en-US', { hour12: false })
     let breakfastEnd = new Date(2021, 0, 1, 11).toLocaleTimeString('en-US', { hour12: false })
@@ -205,21 +207,29 @@ function liveMeal() {
     let dinnerEnd = new Date(2021, 0, 1, 21).toLocaleTimeString('en-US', { hour12: false })
     let lateNightStart = new Date(2021, 0, 1, 21).toLocaleTimeString('en-US', { hour12: false })
     let lateNightEnd = new Date(2021, 0, 1, 0).toLocaleTimeString('en-US', { hour12: false })
-
+    document.querySelectorAll(".live").forEach(x => x.remove());
     if (date >= breakfastStart && date < breakfastEnd) {
-        // console.log('b')
+        let elem = document.createElement('div');
+        elem.classList.add('live');
+        document.getElementById('Breakfast').appendChild(elem);
         return 'Breakfast'
     }
     if (date >= lunchStart && date < lunchEnd) {
-        // console.log('l')
+        let elem = document.createElement('div');
+        elem.classList.add('live');
+        document.getElementById('Lunch').appendChild(elem);
         return 'Lunch'
     }
     if (date >= dinnerStart && date < dinnerEnd) {
-        // console.log('d')
+        let elem = document.createElement('div');
+        elem.classList.add('live');
+        document.getElementById('Dinner').appendChild(elem);
         return 'Dinner'
     }
     if (date >= lateNightStart && date < lateNightEnd) {
-        // console.log('ln')
+        let elem = document.createElement('div');
+        elem.classList.add('live');
+        document.getElementById('Late Night').appendChild(elem);
         return 'Late Night'
     }
 
